@@ -1,24 +1,31 @@
-import logo from './logo.svg';
-import './App.css';
+import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
+import { ApolloClient, InMemoryCache, ApolloProvider } from "@apollo/client";
+import HomePage from "./pages/Homepage";
+import ReviewDetails from "./pages/ReviewDetails";
+import Category from "./pages/Category";
+import SiteHeader from "./components/SiteHeader";
 
+// apollo client
+const client = new ApolloClient({
+  uri: "https://admin-cms.herokuapp.com/graphql",
+  cache: new InMemoryCache(),
+});
+
+// uri: "http://localhost:1337/graphql",
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Router>
+      <ApolloProvider client={client}>
+        <div className="App">
+          <SiteHeader />
+          <Routes>
+            <Route exact path="/" element={<HomePage />} />
+            <Route path="/details/:id" element={<ReviewDetails />} />
+            <Route path="/category/:id" element={<Category />} />
+          </Routes>
+        </div>
+      </ApolloProvider>
+    </Router>
   );
 }
 

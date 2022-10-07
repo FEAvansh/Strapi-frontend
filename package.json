@@ -1,6 +1,9 @@
 {
-  "name": "frontend-strapi",
+    "name": "frontend-strapi",
   "version": "0.1.0",
+  "engines": {
+    "node": "12.11.1"
+  },
   "private": true,
   "dependencies": {
     "@apollo/client": "^3.7.0",

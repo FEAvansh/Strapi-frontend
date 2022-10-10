@@ -1,0 +1,29 @@
+.cardStyle {
+  height: 25rem;
+  width: 18rem;
+}
+.cardView {
+  width: 17rem;
+  height: 30rem;
+  font-size: 13px;
+  margin: 20px;
+}
+.postionDiv {
+  display: flex;
+}
+.imgClass {
+  border: 2px black solid;
+  width: 7rem;
+  margin-left: 28%;
+  padding: 11px;
+  border-radius: 10px;
+  height: 75px;
+}
+
+.h5Class {
+  text-align: center;
+  font-size: 16px;
+}
+.sideLi {
+  margin-left: 40px;
+}

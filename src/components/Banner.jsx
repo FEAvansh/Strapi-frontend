@@ -94,7 +94,8 @@ const Banner = () => {
           <div className="cardView">
             <div class="card cardStyle">
               <img
-                src={`https://admin-cms.herokuapp.com${c.image.data[0].attributes.url}`}
+                // src={`https://admin-cms.herokuapp.com${c.image.data[0].attributes.url}`}
+                src={c.image.data[0].attributes.url}
                 class="card-img-top imgClass"
                 alt="..."
               />

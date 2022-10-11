@@ -8,8 +8,8 @@ import Banner from "./components/Banner";
 
 // apollo client
 const client = new ApolloClient({
-  // uri: "https://admin-cms.herokuapp.com/graphql",
-  uri: "http://localhost:1337/graphql",
+  uri: "https://admin-cms.herokuapp.com/graphql",
+  // uri: "http://localhost:1337/graphql",
   cache: new InMemoryCache(),
 });
 
@@ -20,9 +20,9 @@ function App() {
       <ApolloProvider client={client}>
         <div className="App">
           {/*  <SiteHeader /> */}
-          <Banner/>
+          <Banner />
           <Routes>
-            <Route exact path="/" element={Banner}/>
+            <Route exact path="/" element={Banner} />
             {/* <Route exact path="/" element={<HomePage />} />
             <Route path="/details/:id" element={<ReviewDetails />} />
             <Route path="/category/:id" element={<Category />} /> */}

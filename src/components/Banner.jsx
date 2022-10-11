@@ -81,12 +81,10 @@ const Banner = () => {
 
   return (
     <div class="jumbotron">
-      <h1 class="display-4">
-        {" "}
+      {/* <h1 class="display-4">
         {Data?.title}
-        {/* <ReactMarkdown> {Data?.title}</ReactMarkdown> */}
-      </h1>
-      <ReactMarkdown>{Data.title}</ReactMarkdown>
+      </h1> */}
+      <ReactMarkdown class="display-4" >{Data.title}</ReactMarkdown>
       <p class="lead">{Data?.description}</p>
       <hr class="my-4" />
       <div className="postionDiv">

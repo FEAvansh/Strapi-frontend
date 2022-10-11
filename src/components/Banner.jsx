@@ -1,8 +1,8 @@
 import React from "react";
 // import useFetch from "../hooks/useFetch";
-import { Link } from "react-router-dom";
 import { useQuery, gql } from "@apollo/client";
 import "../components/all.css";
+import { ReactMarkdown } from "react-markdown/lib/react-markdown";
 
 // const REVIEWS = gql`
 //   query GetReviews {
@@ -72,11 +72,21 @@ const Banner = () => {
   }
   //   console.log("data: ", data?.pages?.data[0]?.attributes);
   const Data = data?.pages?.data[0]?.attributes;
-  console.log("Data: ", Data?.serviceList[0]?.ServiceComponent?.map((c)=> c.itemList?.map((l)=> l)));
+  console.log(
+    "Data: ",
+    Data?.serviceList[0]?.ServiceComponent?.map((c) =>
+      c.itemList?.map((l) => l)
+    )
+  );
 
   return (
     <div class="jumbotron">
-      <h1 class="display-4">{Data?.title}</h1>
+      <h1 class="display-4">
+        {" "}
+        {Data?.title}
+        {/* <ReactMarkdown> {Data?.title}</ReactMarkdown> */}
+      </h1>
+      <ReactMarkdown>{Data.title}</ReactMarkdown>
       <p class="lead">{Data?.description}</p>
       <hr class="my-4" />
       <div className="postionDiv">
@@ -89,12 +99,11 @@ const Banner = () => {
                 alt="..."
               />
               <div class="card-body">
-              <h5 class="card-title h5Class">{c.title}</h5>
-              { c.itemList.map((l,index) => (
-                    <li  class="card-text sideLi">
-                    {l}
-                  </li>
-                  ))}
+                <h5 class="card-title h5Class">{c.title}</h5>
+
+                {c.itemList.map((l, index) => (
+                  <li class="card-text sideLi">{l}</li>
+                ))}
                 {/* <p class="card-text">
                   Some quick example text to build on the card title and make up
                   the bulk of the card's content.

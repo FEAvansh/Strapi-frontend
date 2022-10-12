@@ -60,6 +60,7 @@ const PAGES = gql`
 
 const Banner = () => {
   const { loading, error, data } = useQuery(PAGES);
+  console.log('DATA', data);
   //   // const { loading, error, data } = useFetch(
   //   //   "http://localhost:1337/api/reviews"
   //   // );
@@ -70,21 +71,22 @@ const Banner = () => {
   if (error) {
     return <p>error....</p>;
   }
-  //   console.log("data: ", data?.pages?.data[0]?.attributes);
   const Data = data?.pages?.data[0]?.attributes;
-  console.log(
-    "Data: ",
-    Data?.serviceList[0]?.ServiceComponent?.map((c) =>
-      c.itemList?.map((l) => l)
-    )
-  );
+  const Data_one = data?.pages?.data[1]?.attributes;
+  const Data_two = data?.pages?.data[2]?.attributes;
+
+  // console.log(
+  //   "Data: ",
+  //   Data?.serviceList[0]?.ServiceComponent?.map((c) =>
+  //     c.itemList?.map((l) => l)
+  //   )
+  // );
 
   return (
     <div class="jumbotron">
-      {/* <h1 class="display-4">
-        {Data?.title}
-      </h1> */}
-      <ReactMarkdown class="display-4" >{Data.title}</ReactMarkdown>
+      {/* // */}
+      <div>
+      <ReactMarkdown class="display-4">{Data.title}</ReactMarkdown>
       <p class="lead">{Data?.description}</p>
       <hr class="my-4" />
       <div className="postionDiv">
@@ -92,7 +94,6 @@ const Banner = () => {
           <div className="cardView">
             <div class="card cardStyle">
               <img
-                // src={`https://admin-cms.herokuapp.com${c.image.data[0].attributes.url}`}
                 src={c.image.data[0].attributes.url}
                 class="card-img-top imgClass"
                 alt="..."
@@ -103,23 +104,65 @@ const Banner = () => {
                 {c.itemList.map((l, index) => (
                   <li class="card-text sideLi">{l}</li>
                 ))}
-                {/* <p class="card-text">
-                  Some quick example text to build on the card title and make up
-                  the bulk of the card's content.
-                </p> */}
-                {/* <a href="#" class="btn btn-primary">
-                  LINK 
-                </a> */}
               </div>
             </div>
           </div>
         ))}
       </div>
+      </div>
+      {/* // */}
+      <div>
+      <ReactMarkdown class="display-4">{Data_one.title}</ReactMarkdown>
+      <p class="lead">{Data_one?.description}</p>
+      <hr class="my-4" />
+      <div className="postionDiv">
+        {Data_one?.serviceList[0]?.ServiceComponent?.map((c) => (
+          <div className="cardView">
+            <div class="card cardStyle">
+              <img
+                src={c.image.data[0].attributes.url}
+                class="card-img-top imgClass"
+                alt="..."
+              />
+              <div class="card-body">
+                <h5 class="card-title h5Class">{c.title}</h5>
 
-      {/* <p>It uses utility classes for typography and spacing to space content out within the larger container.</p>
-    <p class="lead">
-      <a class="btn btn-primary btn-lg" href="#" role="button">Learn more</a>
-    </p> */}
+                {c.itemList.map((l, index) => (
+                  <li class="card-text sideLi">{l}</li>
+                ))}
+              </div>
+            </div>
+          </div>
+        ))}
+      </div>
+      </div>
+      {/* // */}
+      <div>
+      <ReactMarkdown class="display-4">{Data_two.title}</ReactMarkdown>
+      <p class="lead">{Data_two?.description}</p>
+      <hr class="my-4" />
+      <div className="postionDiv">
+        {Data_two?.serviceList[0]?.ServiceComponent?.map((c) => (
+          <div className="cardView">
+            <div class="card cardStyle">
+              <img
+                src={c.image.data[0].attributes.url}
+                class="card-img-top imgClass"
+                alt="..."
+              />
+              <div class="card-body">
+                <h5 class="card-title h5Class">{c.title}</h5>
+
+                {c.itemList.map((l, index) => (
+                  <li class="card-text sideLi">{l}</li>
+                ))}
+              </div>
+            </div>
+          </div>
+        ))}
+      </div>
+      </div>
+
     </div>
   );
 };

@@ -27,3 +27,87 @@
 .sideLi {
   margin-left: 40px;
 }
+
+.TopBox {
+  display: flex;
+  justify-content: space-between;
+}
+.ButtonBox {
+  font-weight: bold;
+  height: 44px;
+  width: 85px;
+  font-size: 15px;
+  border-radius: 10px;
+  border: ne;
+  border: 1px solid black;
+  background: #005def;
+  color: antiquewhite;
+  margin-top: 24px;
+  cursor: pointer;
+}
+.ButtonBox:hover {
+  background: black;
+}
+.BannerBoxDiv {
+  background-color: white;
+}
+.headerClass {
+  text-align: center;
+}
+.Jumbo {
+  padding: 40px;
+}
+
+.navDiv {
+  display: flex;
+  justify-content: space-evenly;
+  margin-bottom: -10px;
+}
+.techList {
+  padding: 15px;
+  cursor: pointer;
+  font-size: 19px;
+  font-weight: 600;
+  color: #252b33;
+}
+.techInverse {
+  border-bottom: 3px solid #00d4d4;
+  padding: 15px;
+  cursor: pointer;
+  font-size: 19px;
+  font-weight: 600;
+  color: #252b33;
+}
+.listClass {
+  /* background-color: rgb(135, 222, 155); */
+  display: grid;
+  justify-content: space-evenly;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+}
+.listData {
+  /* background-color: rgb(181, 14, 14); */
+  display: flow-root;
+  border-radius: 5px;
+  padding: 15px;
+
+  width: 130px;
+}
+.listData:hover {
+  cursor: pointer;
+  background-color: #e6e0e0;
+}
+.cardImage {
+  height: 50px;
+  width: 50px;
+  padding: 8px;
+}
+.titleClass {
+  text-align: center;
+  font-size: 15px;
+  margin-top: 0px;
+  color: #252b33;
+  font-weight: 300;
+}
+.ImgSetting{
+  text-align: center;
+}

@@ -1,6 +1,5 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
-import Banner_1 from "../Banner_1";
 import "./technology.css";
 export default function Technology() {
   const [navBar, setNavbar] = useState(false);
@@ -104,8 +103,84 @@ export default function Technology() {
             </div>
           </div>
         </div>
-        <Banner_1 />
       </section>
+      {/* // */}
+      <div class="jumbotron Jumbo">
+        <div className="headerClass">
+          <div className="headTitle">
+            <p>
+              <b>Technologies</b> we work with
+            </p>
+          </div>
+          <div className="headData">
+            <span
+              className="metaData"
+              style={{ "border-bottom": "2px solid #00d4d5" }}
+            >
+              Mobile
+            </span>
+            <span className="metaData">Frontend</span>
+            <span className="metaData">Database</span>
+            <span className="metaData">Backend</span>
+            <span className="metaData">CMS</span>
+            <span className="metaData">Infra and DevOps</span>
+          </div>
+        </div>
+        <hr className="break" />
+        <div className="subClass">
+          {/* /// */}
+          <span className="subData">
+            <div className="ImageSet">
+            <img src="img/Apple.svg" className="imgClass" />
+            </div>
+            
+            <div className="subTitle">
+              <p>ISO</p>
+            </div>
+          </span>
+          {/* // */}
+          <span className="subData">
+          <div className="ImageSet">
+            <img src="img/Apple.svg" className="imgClass" />
+            </div>
+            <div className="subTitle">
+              <p>IOS</p>
+            </div>
+          </span>
+          {/* // */}
+          <span className="subData">
+          <div className="ImageSet">
+            <img src="img/Apple.svg" className="imgClass" />
+            </div>
+            <div className="subTitle">
+              <p>IOS</p>
+            </div>
+          </span>
+
+          {/* // */}
+          <span className="subData">
+          <div className="ImageSet">
+            <img src="img/Apple.svg" className="imgClass" />
+            </div>
+            <div className="subTitle">
+              <p>IOS</p>
+            </div>
+          </span>
+
+          {/* // */}
+          <span className="subData">
+          <div className="ImageSet">
+            <img src="img/Apple.svg" className="imgClass" />
+            </div>
+            <div className="subTitle">
+              <p>IOS</p>
+            </div>
+          </span>
+
+          {/* // */}
+        </div>
+      </div>
+      {/* // */}
       <section className="sectionc">
         <h1>
           Let’s co-create your <strong> Success Story</strong>
@@ -122,7 +197,7 @@ export default function Technology() {
               />
               <br />
               Get Free Estimation <br />
-              <a  href="mailto:info@frontendarmy.com">info@frontendarmy.com</a>
+              <a href="mailto:info@frontendarmy.com">info@frontendarmy.com</a>
               <br />
               India
               <br /> 804, Fortune Business Hub, Ahmedabad, Gujarat. 380060{" "}

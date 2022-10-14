@@ -6,7 +6,19 @@ export default function Technology() {
   return (
     <>
       {navBar ? (
-        <div class="header_right"></div>
+        <>
+          <div class="header_right">
+            <span onClick={() => setNavbar(false)}>x</span>
+            <ul>
+              <li>HOME</li>
+              <li>COMPANY</li>
+              <li>SERVICES</li>
+              <li>HIRE DEVELOPER TEAM</li>
+              <li>TECHNOLOGY</li>
+              <li>CASE STUDIES</li>
+            </ul>
+          </div>
+        </>
       ) : (
         <nav className="navbar navbar-expand-lg ">
           <Link className="navbar-brand" to="/">
@@ -244,6 +256,7 @@ export default function Technology() {
           (C) 2022, FrontendArmy Infocon Private Limited.
         </p>
       </footer>
+      
     </>
   );
 }

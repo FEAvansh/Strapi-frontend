@@ -6,6 +6,7 @@ import Category from "./pages/Category";
 import SiteHeader from "./components/SiteHeader";
 import Banner from "./components/Banner";
 import Banner_1 from "./components/Banner_1";
+import Technology from "./components/Technology";
 
 // apollo client
 const client = new ApolloClient({
@@ -36,6 +37,14 @@ function App() {
               element={
                 <>
                   <Banner_1 />
+                </>
+              }
+            />
+            <Route
+              path="/technology"
+              element={
+                <>
+                  <Technology />
                 </>
               }
             />

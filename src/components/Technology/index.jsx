@@ -181,6 +181,7 @@ export default function Technology() {
           (C) 2022, FrontendArmy Infocon Private Limited.
         </p>
       </footer>
+      
     </>
   );
 }

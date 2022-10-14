@@ -76,7 +76,7 @@ const Banner_1 = () => {
             </>
           ))}
         </div>
-        <hr class="my-4" />
+        <hr class="line" />
         {subField === null ? (
           <div className="listClass" onClick={() => navigate("/")}>
             {data?.banners.data[0].attributes?.Dynamic[0]?.SubFields?.map(
